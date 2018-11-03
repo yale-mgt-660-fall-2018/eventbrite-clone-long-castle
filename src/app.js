@@ -18,7 +18,7 @@ function createApp(config) {
     app.use(bodyParser());
 
     // Add a static directory
-    app.use(serve('./public'));
+    app.use(serve(path.join(__dirname, 'public')));
 
     // Add the database to the app's context prototype.
     // This will make the db available in all controllers.
