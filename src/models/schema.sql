@@ -1,11 +1,11 @@
 -- Load up pycrypto so that we can do password hashing
-DROP EXTENSION IF EXISTS pgcrypto;
-CREATE EXTENSION IF NOT EXISTS pgcrypto;
+-- DROP EXTENSION IF EXISTS pgcrypto;
+-- CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
 DROP TABLE IF EXISTS events CASCADE;
 CREATE TABLE IF NOT EXISTS events (
     -- Integer primary key for events
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     title VARCHAR(50) NOT NULL,
     -- 'date' is a reserved word in some SQL dialects.
     -- Here I quoted it to make sure it is interpreted
