@@ -1,3 +1,4 @@
+
 DROP TABLE IF EXISTS events CASCADE;
 CREATE TABLE IF NOT EXISTS events (
     -- Integer primary key for events
