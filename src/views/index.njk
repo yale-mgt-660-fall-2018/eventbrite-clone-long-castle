@@ -25,14 +25,18 @@
           See all events below!
         </div>
         <div class="col-md-6 col-sm-12">
-          <a href="/events/new" id="new">Create a new event!</a>
+          <a href="/events/new" id="new">Create a new event!</a> (Not yet active)
         </div>
       </div>
 
-      <div>
-        {% for way in waysOfBeingAwesome %}
-        <li>{{way}}</li>
-        {% endfor %}
+      <div class="row">
+        <ul id="events">
+          {% for e in allEvents%}
+          <div class="col-md-4 col-sm-12">
+            <li class="event" id="event-{{e.id}}">{{e}}</li>
+          </div>
+          {% endfor %}
+        </ul>
       </div>
 
     </div>
