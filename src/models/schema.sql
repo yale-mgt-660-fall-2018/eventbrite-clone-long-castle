@@ -21,6 +21,19 @@ CREATE TABLE IF NOT EXISTS events (
         DEFAULT current_timestamp
 
 );
+
+CREATE TABLE IF NOT EXISTS registrations (
+    event_id INT PRIMARY KEY REFERENCES events(id),
+    email TEXT NOT NULL 
+        CHECK ( email - 'yale.edu$' AND email = lower(email)),
+    PRIMARY KEY (event_id, email),
+
+);
+
+SELECT * FROM registrations WHERE event_id = 5;
+select * from registrations JOIN events on registrations.event_id = events.id;
+
+
 -- Turn on verbose error messages, which helps our JavaScript
 -- code handle database errors in a graceful manner.
 SET log_error_verbosity TO 'verbose';

@@ -8,6 +8,11 @@ async function index(ctx) {
     return ctx.render(template, { waysOfBeingAwesome });
 }
 
+async function about(ctx) {
+    const template = 'index.njk';
+}
+
 module.exports = {
     index,
+    about,
 };
