@@ -38,14 +38,19 @@ async function index(ctx) {
        datetime: new Date(Math.random())
      }, 
     ];
-    return ctx.render(template, { waysOfBeingAwesome });
+    return ctx.render(template, { allEvents });
 }
 
 async function about(ctx) {
     const template = 'index.njk';
 }
 
+async function register(ctx) {
+    const template = 'register.njk';
+}
+
 module.exports = {
     index,
     about,
+    register,
 };
