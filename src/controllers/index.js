@@ -4,7 +4,7 @@
  */
 async function index(ctx) {
     const template = 'index.njk';
-    /* const allEvents = [
+    const allEvents = [
      {
        id: 1,
        title: "Awesome 1",
@@ -38,7 +38,7 @@ async function index(ctx) {
        datetime: new Date(Math.random())
      }, 
     ];
-    return ctx.render(template, { allEvents }); */
+    return ctx.render(template, { allEvents });
 }
 
 async function about(ctx) {
