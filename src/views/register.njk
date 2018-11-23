@@ -35,7 +35,7 @@
     </head>
     
     <body>
-        <form action="/register" method="post">
+        <form action="/" method="post">
             
             <div class="form-group">
                 <input autocomplete="off" autofocus class="form-control" name="event_name" placeholder="Event Name" type="text">
@@ -71,10 +71,20 @@ document.querySelector('form').onsubmit = function() {
         name.focus();
         return false;
     }
+    else if (name.value.length > 20) {
+        alert('Your event name is way too long. Try shorten it to fewer than 20 characters');
+        name.focus();
+        return false;
+    }
     
     let location = document.querySelector('input[name=event_location]');
     if (!location.value) {
         alert('You must specify your event location');
+        location.focus();
+        return false;
+    }
+    else if (location.value.length > 30) {
+        alert('Your event location is way too long. Try shorten it to fewer than 30 characters');
         location.focus();
         return false;
     }
