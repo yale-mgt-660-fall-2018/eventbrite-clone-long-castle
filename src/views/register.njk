@@ -53,6 +53,11 @@
                     </span>
             </div>       
             
+            <label for="picture">Choose a picture for your event:</label>
+            <div class="form-group">
+            <input class="form-control" type="file" id="picture" name="picture" accept="image/*">            
+            </div>
+            
             <button class="btn btn-primary" type="submit">Create</button>
         </form>        
     </body>
@@ -73,6 +78,13 @@ document.querySelector('form').onsubmit = function() {
         location.focus();
         return false;
     }
+    
+    let picture = document.querySelector('input[name=picture]');
+    if (!picture.value) {
+        alert('You must upload a picture for your event');
+        picture.focus();
+        return false;
+    } 
     
     let time = document.querySelector('input[name=event_time]');
     if (!time.value) {
