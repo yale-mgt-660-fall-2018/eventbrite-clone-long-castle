@@ -42,7 +42,8 @@ async function index(ctx) {
 }
 
 async function about(ctx) {
-    const template = 'index.njk';
+    const template = 'about.njk';
+    return ctx.render(template);
 }
 
 async function register(ctx) {
