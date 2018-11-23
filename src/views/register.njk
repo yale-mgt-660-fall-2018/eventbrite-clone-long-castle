@@ -47,7 +47,7 @@
             
             <label class="control-label">Event Time</label>
             <div class='input-group date' id='datetimepicker1'>
-                <input type='text' class="form-control" name = "Event Time">
+                <input type='text' class="form-control" name = "event_time">
                     <span class="input-group-addon">
                          <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -57,3 +57,29 @@
         </form>        
     </body>
 </html>
+
+<script>
+document.querySelector('form').onsubmit = function() {
+    let name = document.querySelector('input[name=event_name]');
+    if (!name.value) {
+        alert('You must specify your event name');
+        name.focus();
+        return false;
+    }
+    
+    let location = document.querySelector('input[name=event_location]');
+    if (!location.value) {
+        alert('You must specify your event location');
+        location.focus();
+        return false;
+    }
+    
+    let time = document.querySelector('input[name=event_time]');
+    if (!time.value) {
+        alert('You must specify your event time');
+        time.focus();
+        return false;
+    }
+    return true;
+};
+</script>
