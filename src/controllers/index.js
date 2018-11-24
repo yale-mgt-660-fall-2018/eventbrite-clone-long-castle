@@ -50,6 +50,10 @@ async function register(ctx) {
     const template = 'register.njk';
     return ctx.render(template);
 }
+async function sprint(ctx) {
+    const template = 'sprint.html';
+    return ctx.render(template);
+}
 
 module.exports = {
     index,

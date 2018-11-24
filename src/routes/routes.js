@@ -5,6 +5,7 @@ const router = new Router();
 router.get('/', indexControllers.index);
 router.get('/about', indexControllers.about);
 router.get('/register', indexControllers.register);
+router.get('/sprint', indexControllers.sprint ); 
 
 
 module.exports = router;
