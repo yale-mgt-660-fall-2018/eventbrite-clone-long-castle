@@ -4,9 +4,8 @@ const eventsModels = require('../models/events,js');
  * @param  {Context} ctx - A Koa Context
  * @returns {Promise} - Returns a promise that resolves to undefined
  */
-
 async function register(ctx) {
-    const errors = []
+    const errors = [];
     if (ctx.method === 'POST') {
         try {
             const theEvent = await eventsModels.insert(
