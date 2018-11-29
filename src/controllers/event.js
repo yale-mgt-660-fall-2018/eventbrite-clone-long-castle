@@ -1,4 +1,4 @@
-const eventsModels = require('../models/events,js');
+const eventsModels = require('../models/events.js');
 
 /**
  * @param  {Context} ctx - A Koa Context
