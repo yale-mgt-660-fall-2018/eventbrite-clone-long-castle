@@ -6,16 +6,16 @@
  * @param  {String} location - Location of the event
  * @returns {Promise} - Promise that resolves to new row in db.
  */
-async function insert(db, title, date, imageURL, location) {
+async function insert(db, title, startDate, endDate, imageURL, location) {
     // Notice that our JavaScript variables are CamelCase
     // and our SQL variables are snake_case. This is a
     // common convention.
     const stmt = `
-        INSERT INTO events (title, date, image_url, location)
+        INSERT INTO events (title, start_date, end_date, image_url, location)
         VALUES ($1, $2, $3, $4)
-        RETURNING id, title, date, image_url, location, created_at
+        RETURNING id, title, start_date, end_date, image_url, location, created_at
     `;
-    return db.one(stmt, [title, date, imageURL, location]);
+    return db.one(stmt, [title, startDate, endDate, imageURL, location]);
 }
 
 /**

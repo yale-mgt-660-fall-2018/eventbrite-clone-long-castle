@@ -46,13 +46,7 @@ async function about(ctx) {
     return ctx.render(template);
 }
 
-async function register(ctx) {
-    const template = 'register.njk';
-    return ctx.render(template);
-}
-
 module.exports = {
     index,
     about,
-    register,
 };

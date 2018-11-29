@@ -53,17 +53,9 @@
                     </span>
             </div>       
             
-            <label class="control-label">Event End Time</label>
-            <div class='input-group date' id='datetimepicker2'>
-                <input type='text' class="form-control" name = "event_end_time">
-                    <span class="input-group-addon">
-                         <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-            </div>   
-            
             <label for="picture">Choose a picture for your event:</label>
             <div class="form-group">
-            <input class="form-control" type="file" id="picture" name="picture" accept="image/*">            
+            <input class="form-control" type="text" id="picture" name="picture">            
             </div>
             
             <button class="btn btn-primary" type="submit">Create</button>
@@ -108,13 +100,6 @@ document.querySelector('form').onsubmit = function() {
     if (!startTime.value) {
         alert('You must specify your event start time');
         startTime.focus();
-        return false;
-    }
-    
-    let endTime = document.querySelector('input[name=event_end_time]');
-    if (!endTime.value) {
-        alert('You must specify your event end time');
-        endTime.focus();
         return false;
     }
     return true;
