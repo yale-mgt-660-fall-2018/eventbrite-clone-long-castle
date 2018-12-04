@@ -5,18 +5,22 @@ const eventsModels = require('../models/events.js');
  * @returns {Promise} - Returns a promise that resolves to undefined
  */
 async function register(ctx) {
+    console.log("I am here");
     const errors = [];
     if (ctx.method === 'POST') {
+        console.log("I am here!!");
         try {
             const theEvent = await eventsModels.insert(
                 ctx.db,
                 ctx.request.body.event_name,
                 ctx.request.body.event_start_time,
-                ctx.reqeust.body.image,
+                ctx.request.body.picture,
                 ctx.request.body.event_location,
             );
+            console.log(theEvent);
             ctx.redirect('/events/' + theEvent.id);
         } catch (e) {
+            console.log(e);
             errors.push("there was an error saving");
         }
     }
