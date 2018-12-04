@@ -1,5 +1,4 @@
 const Koa = require('koa');
-const serve = require('koa-static');
 const pgp = require('pg-promise')();
 const views = require('koa-views');
 const bodyParser = require('koa-bodyparser');
@@ -16,9 +15,6 @@ function createApp(config) {
     const app = new Koa();
 
     app.use(bodyParser());
-
-    // Add a static directory
-    app.use(serve(path.join(__dirname, 'public')));
 
     // Add the database to the app's context prototype.
     // This will make the db available in all controllers.
