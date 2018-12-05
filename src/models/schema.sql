@@ -27,7 +27,6 @@ CREATE TABLE IF NOT EXISTS registrations (
     email TEXT NOT NULL 
         CHECK ( email - 'yale.edu$' AND email = lower(email)),
     PRIMARY KEY (event_id, email),
-
 );
 
 -- Turn on verbose error messages, which helps our JavaScript
