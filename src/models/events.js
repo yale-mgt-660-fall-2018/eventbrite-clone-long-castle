@@ -23,8 +23,10 @@ async function insert(db, title, date, imageURL, location) {
  * @returns {Promise} - Promise that resolves to and int
  */
 async function count(db) {
+    console.log("inside count");
     const stmt = 'select COUNT(*) FROM events';
     const result = await db.one(stmt);
+    console.log(result);
     return parseInt(result.count, 10);
 }
 
@@ -48,10 +50,13 @@ async function getByLocation(db, searchString) {
  * @returns {Promise} - Promise that resolves to many events or null
  */
 async function getAll(db) {
+    console.log("inside getAll");
     const stmt = `
         SELECT * FROM events
     `;
-    return db.any(stmt, [true]);
+    const result = await db.any(stmt, [true]);
+    console.log(result);
+    return result;
 }
 
 

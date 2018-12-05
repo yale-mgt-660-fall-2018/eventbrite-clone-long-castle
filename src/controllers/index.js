@@ -6,63 +6,18 @@ const eventsModels = require('../models/events.js');
  */
 async function index(ctx) {
     const errors = [];
-    var allEvents = [
-        {
-            id      : 1,
-            title   : "Awesome 1",
-            datetime: new Date(Math.random())
-        }
-    ];
     
     const template = 'index.njk';
     
     try {
-        allEvents = await eventsModels.getAll(ctx.db);
-        return ctx.render(template, { allEvents });
+        const num = await eventsModels.count(ctx.db);
+        const allEvents = await eventsModels.getAll(ctx.db);
+        return ctx.render(template, { allEvents, num });
     } catch(e) {
+        console.log(e);
         errors.push("there was an error retrieving all events");
         return ctx.render(template, { errors: errors });
     }
-    
-    const testEvents = [
-        {
-            id      : 1,
-            title   : "Awesome 1",
-            datetime: new Date(Math.random())
-        }, 
-        {
-            id      : 2,
-            title   : "Awesome 2",
-            datetime: new Date(Math.random())
-        },     
-        {
-            id      : 3,
-            title   : "Awesome 3",
-            datetime: new Date(Math.random())
-        }, 
-        {
-            id      : 4,
-            title   : "Awesome 4",
-            datetime: new Date(Math.random())
-        },     
-        {
-            id      : 5,
-            title   : "Awesome 5",
-            datetime: new Date(Math.random())
-        }, 
-        {
-            id      : 6,
-            title   : "Awesome 6",
-            datetime: new Date(Math.random())
-        },     
-        {
-            id      : 7,
-            title   : "Awesome 7",
-            datetime: new Date(Math.random())
-        }, 
-    ];
-    
-    return ctx.render(template, { allEvents });
 }
 
 /**

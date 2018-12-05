@@ -42,7 +42,7 @@
         </div>
       </div>
 
-allEvents: {{ allEvents }}
+allEvents: {{ num }}
 
       <div class="row">
         <div class="col-md-6 col-sm-12">
@@ -56,7 +56,7 @@ allEvents: {{ allEvents }}
 
       <div class="row">
         <ul id="events">
-          {% for e in allEvents%}
+          {% for e in allEvents %}
           <div class="col-md-4 col-sm-12">
             <li class="event" id="event-{{e.id}}">
               <div class="card">
@@ -64,7 +64,7 @@ allEvents: {{ allEvents }}
                   <h5 class="card-title">{{e.title}}</h5>
                 </a>
                 <h6 class="card-subtitle">
-                  <time datetime="{{e.datetime}}">{{e.datetime.toDateString()}}</time>
+                  <time datetime="{{e.date}}">{{e.date.toDateString()}}</time>
                 </h6>
               </div>
             </li>
