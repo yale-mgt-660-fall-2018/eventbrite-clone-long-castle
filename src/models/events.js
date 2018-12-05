@@ -43,8 +43,21 @@ async function getByLocation(db, searchString) {
     return db.oneOrNone(stmt, [searchString]);
 }
 
+/**
+ * @param  {Database} db - Pg-promise database object
+ * @returns {Promise} - Promise that resolves to many events or null
+ */
+async function getAll(db) {
+    const stmt = `
+        SELECT * FROM events
+    `;
+    return db.any(stmt, [true]);
+}
+
+
 module.exports = {
     insert,
     count,
     getByLocation,
+    getAll
 };
