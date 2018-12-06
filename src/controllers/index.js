@@ -13,8 +13,7 @@ async function index(ctx) {
         const num = await eventsModels.count(ctx.db);
         const allEvents = await eventsModels.getAll(ctx.db);
         return ctx.render(template, { allEvents, num });
-    } catch(e) {
-        console.log(e);
+    } catch(e) {;
         errors.push("there was an error retrieving all events");
         return ctx.render(template, { errors: errors });
     }
