@@ -17,22 +17,24 @@
     <div>
     <h2>Sprint Completed & In-Progress Story Points </h2>
     <p>
-        We completed ### story points across ### stories during the last sprint. While we are not formally sprinting next week, we still have some stories under development, detailed below:
+        We completed ### story points across ### stories during the last sprint. We continue to have have a number of stories under development, detailed below, and are hoping to accelerate our progress:
     </p>
         <strong> Completed Stories </strong>
         <ol>
-          <li> 6 story points for Create New Event Page </li>
+          <li>10 story points for Create New Event Page </li>
           <li> 3 story points for Create Home Page </li>
-
-          <li>## story points for Create About Page</li>
+          <li>2 story points for Create About Page</li>
+          <li> Unallocated time for fixing bugs on model and create registrant database</li>
+          <li> Unallocated time on insertion of data into events database</li>
+          
           <li>## story points for Google Analytics integration</li>
         </ol>
         <br /> <img src="images/spring4burndownchart.png.png">
         <strong> Stories Under Development </strong>
         <ol>
-        <li>Create Home Page</li>
-        <li> Create New Event Page </li>
-        <li> Create Team Logo </li>
+        <li>Create Home Page (<strong>9 points remaining<strong>)</li>
+        <li>Create New Event Page (<strong>2 points remaining<strong>) </li>
+        <li>Create Team Logo </li>
       </ol>
       <p>
       <strong> Roadblocks </strong> 
@@ -58,12 +60,3 @@
 
   </body>
 </html>
-
-
-75% of work done is documented on trello. 10% on fixing bugs on model and create registrant database. 5% on building out insertion of data into events database 
-
-I was up for a long time but couldn’t get the database talking to the app: It’s running in dev mode and I can add events to it manually in Postgres but not through the app. Luckily I think the problem is well defined and I’m going to go see Kyle at 9:50 to get his help. If this is fixed I think I‘ll be able to fix not just the index page but also the event detail page
-
-Also in the process I found some hiccups in our schema.sql which I commented out when pushing to master. Not sure if they were causing issues for you guys as well, but in case you pull from master this morning and run into problems you can revert the changes I made to schema.sql
-
-The index page now successfully pulls the list of events from the events database AND the event creation page successfully adds events to the database! At least on my local machine lol
