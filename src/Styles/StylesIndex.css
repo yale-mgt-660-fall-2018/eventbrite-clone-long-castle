@@ -1,23 +1,30 @@
 
-title {
+h2 {
     font-size: larger;
     text-align: center;
-    font: Helvetica;
+    font-family: Impact;
     font: bold;
     color: white;
-    background-image: url(/src/public/images/christian-stahl-323329-unsplash.jpg);
+ 
 }
+
 
 body 
 {
-    background: linear-gradient(to right, #00FFFF 0%, #0000FF 50%, #0000A0 100%);
-    text-align: center;
-    color: white;
-    font: bold;
-    text-decoration: underline;
-    font-size: medium;
-    
-    
+    background: black;
+   
 }
 
+ul
+{ 
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url("https://unsplash.com/photos/KoXrC_TUXCM");
+    color: White;
+}
 
+img 
+{ 
+    border-radius: 50%;
+    border: 70px solid white;
+}
