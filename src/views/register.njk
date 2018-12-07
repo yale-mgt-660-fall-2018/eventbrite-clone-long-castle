@@ -4,7 +4,7 @@
 
     <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129876748-1"></script>
+{#     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129876748-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -12,6 +12,16 @@
 
         gtag('config', 'UA-129876748-1');
     </script>
+ #}
+ {# Trying alternative GA code #}
+    <!-- Google Analytics -->
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('send', 'pageview');
+        </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
 
         <!-- Required meta tags -->
         <meta charset="utf-8">
