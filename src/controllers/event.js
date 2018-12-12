@@ -17,7 +17,9 @@ async function register(ctx) {
                 ctx.request.body.event_location,
             );
             console.log(theEvent);
-            ctx.redirect('/events/' + theEvent.id);
+                ctx.redirect('/'); 
+/**            ctx.redirect('/events/' + theEvent.id); */
+/** Tweaking redirect to take you back to the homepage to see if this fixes the duplication.  */
         } catch (e) {
             errors.push("there was an error saving");
         }
