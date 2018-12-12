@@ -28,7 +28,17 @@ async function about(ctx) {
     return ctx.render(template);
 }
 
+/**
+ * @param  {Context} ctx - A Koa Context
+ * @returns {Promise} - Returns a promise that resolves to undefined
+ */
+async function finalreport(ctx) {
+    const template = 'finalreport.njk';
+    return ctx.render(template);
+}
+
 module.exports = {
     index,
     about,
+    finalreport,
 };
