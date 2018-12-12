@@ -6,7 +6,7 @@
 title {
     font-size: 4em;
     text-align: center;
-    font-family: Impact;
+    font: Impact;
     font: bold;
     color: white;
  
@@ -16,7 +16,7 @@ title {
 body 
 {
     padding: 20px 20px 20px 20px;
-    background-image: url('/src/public/images/bg.jpg');
+    background: black;
     text-align: center;
     color: white; 
     font-family: Helvetica;
