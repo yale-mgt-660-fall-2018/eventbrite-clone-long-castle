@@ -31,7 +31,8 @@ async function register(ctx) {
 async function detail(ctx) {
     const errors = [];
     const template = 'detail.njk';
-    return ctx.render(template);
+    const event_id = ctx.params.id;
+    return ctx.render(template, { event_id });
 }
 
 module.exports = {
