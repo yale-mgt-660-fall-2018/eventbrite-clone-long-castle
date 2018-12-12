@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+{#     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129876748-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129876748-1');
+    </script>
+ #}
+ {# Trying alternative GA code #}
+    <!-- Google Analytics -->
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-129876748-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/views/styles.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+	    <script type='text/javascript'>
+	        	$( document ).ready(function() {
+		            	$('#datetimepicker1').datetimepicker();
+		        });
+	    </script>
+
+        <title>Event Details</title>
+
+    </head>
+    
+    <body>
+    <!--
+        <form action="/events/new" method="post">
+            
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="event_name" placeholder="Event Name" type="text">
+            </div>
+            
+            <div class="form-group">
+                <input class="form-control" name="event_location" placeholder="Event Location" type="text">
+            </div>
+            
+            <label class="control-label">Event Start Time</label>
+            <div class='input-group date' id='datetimepicker1'>
+                <input type='text' class="form-control" name = "event_start_time">
+                    <span class="input-group-addon">
+                         <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+            </div>       
+            
+            <label for="picture">Choose a picture for your event:</label>
+            <div class="form-group">
+            <input class="form-control" type="text" id="picture" name="picture">            
+            </div>
+            
+            <button class="btn btn-primary" type="submit">Create</button>
+        </form>       
+    -->
+        
+        <h1>Event</h1>    
+    </body>
+</html>
+
+<!--
+<script>
+document.querySelector('form').onsubmit = function() {
+    let name = document.querySelector('input[name=event_name]');
+    if (!name.value) {
+        alert('You must specify your event name');
+        name.focus();
+        return false;
+    }
+    else if (name.value.length > 20) {
+        alert('Your event name is way too long. Try shorten it to fewer than 20 characters');
+        name.focus();
+        return false;
+    }
+    
+    let location = document.querySelector('input[name=event_location]');
+    if (!location.value) {
+        alert('You must specify your event location');
+        location.focus();
+        return false;
+    }
+    else if (location.value.length > 30) {
+        alert('Your event location is way too long. Try shorten it to fewer than 30 characters');
+        location.focus();
+        return false;
+    }
+    
+    let picture = document.querySelector('input[name=picture]');
+    if (!picture.value) {
+        alert('You must upload a picture for your event');
+        picture.focus();
+        return false;
+    } 
+    
+    let startTime = document.querySelector('input[name=event_start_time]');
+    if (!startTime.value) {
+        alert('You must specify your event start time');
+        startTime.focus();
+        return false;
+    }
+    return true;
+};
+</script>
+-->

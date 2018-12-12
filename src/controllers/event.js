@@ -24,6 +24,17 @@ async function register(ctx) {
     return ctx.render(template, { errors: errors });
 }
 
+/**
+ * @param  {Context} ctx - A Koa Context
+ * @returns {Promise} - Returns a promise that resolves to undefined
+ */
+async function detail(ctx) {
+    const errors = [];
+    const template = 'detail.njk';
+    return ctx.render(template);
+}
+
 module.exports = {
     register,
+    detail
 };
