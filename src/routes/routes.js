@@ -5,7 +5,7 @@ const eventControllers = require('../controllers/event.js');
 const router = new Router();
 router.get('/', indexControllers.index);
 router.get('/about', indexControllers.about);
-router.get('/finalreport', indexControllers.report);
+router.get('/finalreport', indexControllers.finalreport);
 router.get('/events/new', eventControllers.register);
 router.post('/events/new', eventControllers.register);
 router.get('/events/:id', eventControllers.detail);
