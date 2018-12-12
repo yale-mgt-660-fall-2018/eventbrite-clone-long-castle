@@ -17,15 +17,16 @@ body
 
 ul
 { 
+    
     padding-left: 20px;
     padding-right: 20px;
     background-image: radial-gradient();
-
+    list-style-type: none;
     color: White;
     font-family: Helvetica;
     font: bold;
     font-size: 2em;
-    text-align: center;
+    text-align: left;
 }
 
 img 

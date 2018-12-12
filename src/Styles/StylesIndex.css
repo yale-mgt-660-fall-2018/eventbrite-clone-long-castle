@@ -1,6 +1,10 @@
 
-h2 {
-    font-size: larger;
+
+
+
+
+title {
+    font-size: 4em;
     text-align: center;
     font-family: Impact;
     font: bold;
@@ -11,20 +15,17 @@ h2 {
 
 body 
 {
-    background: black;
-   
+    padding: 20px 20px 20px 20px;
+    background-image: url('/src/public/images/bg.jpg');
+    text-align: center;
+    color: white; 
+    font-family: Helvetica;
 }
 
-ul
-{ 
-    padding-left: 20px;
-    padding-right: 20px;
-    background-image: url("https://unsplash.com/photos/KoXrC_TUXCM");
-    color: White;
-}
 
 img 
 { 
     border-radius: 50%;
     border: 70px solid white;
 }
+
