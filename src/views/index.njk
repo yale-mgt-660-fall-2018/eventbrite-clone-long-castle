@@ -71,7 +71,7 @@ img
 
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class=>
           <h1>Eventbrite clone for MGT 660, using Koa and Postgres</h1>
         </div>
       </div>
@@ -79,10 +79,10 @@ img
 allEvents: {{ num }}
 
       <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class>
           See all events below!
         </div>
-        <div class="col-md-6 col-sm-12">
+        <div class=>
 {# Changed the href below to register #}
           <a href="/events/new" id="new" class="btn">Create a new event!</a>
         </div>
@@ -91,7 +91,7 @@ allEvents: {{ num }}
       <div class="row">
         <ul id="events">
           {% for e in allEvents %}
-          <div class="col-md-4 col-sm-12">
+          <div class=>
             <li class="event" id="event-{{e.id}}">
               <div class="card">
                 <a href="/events/{{e.id}}" id="title">
