@@ -20,7 +20,6 @@ async function insert(db, title, date, imageURL, location) {
         VALUES ($1, $2, $3, $4)
         RETURNING id, title, date, image_url, location, created_at
     `;
-    console.log(db.one(stmt, [title, date, imageURL, location]));
     return db.one(stmt, [title, date, imageURL, location]);
 }
 
