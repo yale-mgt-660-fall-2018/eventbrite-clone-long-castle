@@ -1,0 +1,38 @@
+
+
+h2 {
+    font-size: 4em;
+    text-align: center;
+    font-family: Impact;
+    font: bold;
+    color: white;
+ 
+}
+
+
+body 
+{
+    background: black;
+}
+
+ul
+{ 
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: radial-gradient();
+    list-style-type: none;
+    color: White;
+    font-family: Helvetica;
+    font: bold;
+    font-size: 2em;
+    text-align: left;
+}
+
+img 
+{ 
+    border-radius: 50%;
+    border: 70px solid white;
+}
+
+
