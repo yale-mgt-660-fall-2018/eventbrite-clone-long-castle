@@ -54,72 +54,7 @@
     </head>
     
     <body>
-    <!--
-        <form action="/events/new" method="post">
-            
-            <div class="form-group">
-                <input autocomplete="off" autofocus class="form-control" name="event_name" placeholder="Event Name" type="text">
-            </div>
-            
-            <div class="form-group">
-                <input class="form-control" name="event_location" placeholder="Event Location" type="text">
-            </div>
-            
-            <label class="control-label">Event Start Time</label>
-            <div class='input-group date' id='datetimepicker1'>
-                <input type='text' class="form-control" name = "event_start_time">
-                    <span class="input-group-addon">
-                         <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-            </div>       
-            
-            <label for="picture">Choose a picture for your event:</label>
-            <div class="form-group">
-            <input class="form-control" type="text" id="picture" name="picture">            
-            </div>
-            
-            <button class="btn btn-primary" type="submit">Create</button>
-        </form>       
-    -->
-        {% if theEvent != null %}
-            <h1 id="title">
-                {{ theEvent.title }}
-            </h1>
-            
-            <div>
-                Date: <span id="date">{{ theEvent.date.toDateString() }}</span><br>
-                Time: <span id="time">{{ theEvent.date.toTimeString() }}</span>
-            </div>
-            <br>
-            <div>
-                Location: <span id="location">{{ theEvent.location }}</span>
-            </div>
-            <div>
-                <img id="image" src="{{ theEvent.image_url }}" />
-            </div>
-            <br>
-            
-            <div>
-            {% if theEvent.attendee != null %}
-                Attendees:
-                <ul id="attendees">
-                {% for attendee in theEvent.attendees %}
-                    <li class="list-group-item">{{ attendee.email }}</li>
-                {% endfor %}
-                </ul>
-            {% else %}
-                No attendees yet!    
-            {% endif %}
-            </div>
-        {% else %}
-            <h1>No event with that id!</h1>
-        {% endif %}
-        
-        <div>
-        Want to contribute? <a href="/{{ donation.toLowerCase() }}" id="donate">{{ donation }}</a> now!
-        </div>
-    
-        
+        <h1>Thank you!</h1>
     </body>
 </html>
 

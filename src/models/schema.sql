@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS events (
     "date" TIMESTAMP WITH TIME ZONE NOT NULL,
     -- The 'image_url' must be a URL ending in png, gif.
     image_url TEXT NOT NULL
-        CHECK ( image_url ~ '^https?://.*\.(png|gif)$' ),
+        CHECK ( image_url ~ '^https?://.*\.(png|gif|jpg)$' ),
     "location" TEXT NOT NULL,
     -- Record the time at which this event was created
     created_at TIMESTAMP WITH TIME ZONE
@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS events (
 );
 
 CREATE TABLE IF NOT EXISTS registrations (
-    event_id INT PRIMARY KEY REFERENCES events(id),
+    id SERIAL PRIMARY KEY, 
+    event_id INT REFERENCES events(id),
     email TEXT NOT NULL 
         CHECK ( email ~ 'yale.edu$' AND email = lower(email)) --,
     -- PRIMARY KEY (event_id, email)

@@ -10,11 +10,17 @@ async function insert(db, title, date, imageURL, location) {
     // Notice that our JavaScript variables are CamelCase
     // and our SQL variables are snake_case. This is a
     // common convention.
+    console.log("just entered eventsModels.insert function");
+    console.log(title);
+    console.log(date);
+    console.log(imageURL);
+    console.log(location);
     const stmt = `
         INSERT INTO events (title, date, image_url, location)
         VALUES ($1, $2, $3, $4)
         RETURNING id, title, date, image_url, location, created_at
     `;
+    console.log(db.one(stmt, [title, date, imageURL, location]));
     return db.one(stmt, [title, date, imageURL, location]);
 }
 
