@@ -47,6 +47,23 @@ async function getByLocation(db, searchString) {
 
 /**
  * @param  {Database} db - Pg-promise database object
+ * @param  {String} searchString - String for which to search event id
+ * @returns {Promise} - Promise that resolves to one event or null
+ */
+async function getByID(db, searchString) {
+    // See pgpromise documentation for this ":value" syntax
+    // and why it is used.
+    console.log("just entered getByID");
+    const stmt = `
+        SELECT * FROM events WHERE
+        id = $1
+    `;
+    return db.oneOrNone(stmt, [searchString]);
+}
+
+
+/**
+ * @param  {Database} db - Pg-promise database object
  * @returns {Promise} - Promise that resolves to many events or null
  */
 async function getAll(db) {
@@ -64,5 +81,6 @@ module.exports = {
     insert,
     count,
     getByLocation,
+    getByID,
     getAll
 };

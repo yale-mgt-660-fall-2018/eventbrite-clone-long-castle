@@ -32,7 +32,16 @@ async function detail(ctx) {
     const errors = [];
     const template = 'detail.njk';
     const event_id = ctx.params.id;
-    return ctx.render(template, { event_id });
+    try {
+        console.log("about to look for event");
+        const theEvent = await eventsModels.getByID(ctx.db, event_id);
+        console.log("finished looking for event");
+        console.log(theEvent);
+        return ctx.render(template, { theEvent });
+    } catch (e) {
+        console.log(e);
+        errors.push("there was an error finding the event");
+    }
 }
 
 module.exports = {
