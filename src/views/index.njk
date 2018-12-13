@@ -82,11 +82,10 @@
           {% for e in allEvents %}
             <li class="event" id="event-{{e.id}}">
                  <h5 class="">{{e.title}}</h5>
-                <a href="/events/{{e.id}}" id="title" class="btn btn-primary">Event Details</a>
+                <a href="/events/{{e.id}}" id="title" class="btn">Event Details</a>
                  
                 </a>
-                <h6 class="card-subtitle" id="time"><time>{{e.date}}</time></h6>
-                </h6>
+                <h6 id="time"><time>{{e.date}}</time></h6>
               </div>
             </li>
           </div>
