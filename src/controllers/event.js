@@ -50,7 +50,9 @@ async function detail(ctx) {
         const attendees = await attendeesModels.getByEventID(ctx.db, event_id);
         console.log("finished looking for attendees");
         console.log(attendees);
-        return ctx.render(template, { theEvent, donation, attendees });
+        
+        const confirmation = ctx.params.confirmation;
+        return ctx.render(template, { theEvent, donation, attendees, confirmation });
     } catch (e) {
         console.log(e);
         errors.push("there was an error finding the event");
