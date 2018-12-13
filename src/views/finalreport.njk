@@ -23,51 +23,88 @@
     <!-- End Google Analytics -->
     <meta charset="utf-8">
     
-    <title>About the Rukmetropolis Team</title>
+    <title>Final Report</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 <!-- Added Styling from the stylesheet in a style tag here, please link to the sheet once this page is finalized -->
-
-<style>
-    h2 {
-    font-size: 4em;
-    text-align: center;
-    font-family: Impact;
-    font: bold;
-    color: white;
- 
-}
-
-
-body 
-{
-    background: black;
-}
-
-ul
-{ 
-    padding-left: 20px;
-    padding-right: 20px;
-    background-image: radial-gradient();
-    list-style-type: none;
-    color: White;
-    font-family: Helvetica;
-    font: bold;
-    font-size: 2em;
-    text-align: center;
-}
-
-img 
-{ 
-    border-radius: 50%;
-    border: 70px solid white;
-}
-
-</style>
 </head>
 <body>
-    <h2>Team long-castle Project Report</h2>
+<h2>Team long-castle Project Report</h2>
+<h3>Team</h3>
+    <ul>
+      <li>Alex Kasavin (<a href="mailto:Alex.Kasavin@yale.edu">Alex.Kasavin@yale.edu</a>)</li>
+      <li>Gokul Madhavan (<a href="mailto:Gokul.Madhavan@yale.edu">Gokul.Madhavan@yale.edu</a>)</li>
+      <li>Rukma Sen (<a href="mailto:Rukma.Sen@yale.edu">Rukma.Sen@yale.edu</a>)</li>
+      <li>Owen Yang (<a href="mailto:Owen.Yang@yale.edu">Owen.Yang@yale.edu</a>)</li>
+    </ul>
+<p>
+<h3>Sources of Traffic</h3>
+<table style="width:100%">
+  <tr>
+    <th>Source</th>
+    <th>Percentage of Traffic</th> 
+  </tr>
+  <tr>
+    <td>http://som.yale.edu/</td>
+    <td>40.07%</td> 
+  </tr>
+ <tr>
+    <td>http://divinity.yale.edu/</td>
+    <td>5.03%</td> 
+  </tr>
+   <tr>
+    <td>http://medicine.yale.edu/</td>
+    <td>29.15%</td> 
+  </tr>
+   <tr>
+    <td>http://law.yale.edu/</td>
+    <td>24.93%</td> 
+  </tr>
+   <tr>
+    <td>http://search.yale.edu</td>
+    <td>0%</td> 
+  </tr>
+</table>
 
+<p>A direct extract from Google Analytics is visible below:</p>
+<img width="50%" src="http://prntscr.com/lumo80">
 
+<h3>Effectiveness of Different Calls to Action</h3>
+<p>
+<p>Of the visitors who chose to Donate or Support events:
+<ul>39 visitors clicked on the "Donate" button</ul>
+<ul>21 visitors clicked on the "Support" button</ul>
+<li>
+<p>
+<p>THe "Donate" call to action is almost twice as effective.</p>
+<p>
+<h3>Testing Outcomes</h3>
+<p>At the end of this sprint, we 
+<p>
+<h2>Sprint Report</h2>
+<p> We completed a substantial volume of work during this sprint. Like many development teams, we did not effectively pace outselves throughout the project and overburdened outselves towards the end.</p>
+<p> As of this writing, we are passing 36 tests, with some caveats:<p>
+<ul>
+<li>Because of the way we are returning errors on the registration page, the notification must be dismissed in order for the "should not allow user to submit event..." tests to pass</li>
+<li>Email validation is occuring in the database, which is causing the "should not allow RSVP with..." tests to finalized</li>
+<li>We did not successfully complete the API requirements.</li>
+</ul>
+<h3>Completed Stories</h3>
+  <ol>
+        <li>Create Home Page (<strong>9 points completed<strong>)</li>
+        <li>Create New Event Page (<strong>2 points completed<strong>) </li>
+        <li>Create Team Logo </li>
+  </ol>
+  <p>"Tasks" in the view below refer to broader stories above.</p>
+  <img width="50%" src="http://prntscr.com/lun048">
+
+<h3>Product Backlog</h3>
+  <ol>
+    <li>API integration (<strong>10 story points</strong>)</li>
+  </ol>
+<h3>Lessons Learned</h3>
+<p>We found that adhering to the Agile process under pressure was exceptionally challenging. It takes tremendous discipline to do so - probably even more so under the constraints of commercial, business-critical releases.</p>
+<p>
+<p>Without a solid foundation in git, we did not manage branching or testing effectively, and wound up testing extensively in production on the production database.</p>
 </body>
 </html>
