@@ -19,6 +19,7 @@ async function register(ctx) {
             );
             console.log(theEvent);
             ctx.redirect('/events/' + theEvent.id);
+
         } catch (e) {
             errors.push("there was an error saving");
         }
