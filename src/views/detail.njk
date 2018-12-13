@@ -149,7 +149,7 @@ document.querySelector('form').onsubmit = function() {
         email.focus();
         return false;
     }
-    else if (!email.toLowerCase().endsWith("yale.edu")) {
+    else if (!email.value.toLowerCase().endsWith("yale.edu")) {
         alert('You must specify your Yale email address');
         email.focus();
         return false;
