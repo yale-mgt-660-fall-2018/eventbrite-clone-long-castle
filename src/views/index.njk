@@ -67,8 +67,8 @@
         <ul id="events">
           {% for e in allEvents %}
             <li class="event" id="event-{{e.id}}">
-                <h5 href="/events/{{e.id}}" id="title" class="">{{e.title}}</h5>
-                <h6 id="time"><time>{{e.date}}</time></h6>
+                <a href="/events/{{e.id}}" id="title" class="">{{e.title}}</a>
+                <id="time"><time>{{e.date}}</time>
               </div>
             </li>
           </div>
