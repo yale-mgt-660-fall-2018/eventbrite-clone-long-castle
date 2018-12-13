@@ -32,7 +32,7 @@
         
   <title>MGT660 Eventbrite Clone</title>
   <style>
-      footer {
+  footer {
         bottom: 0;
         width: 100%;
         height: 60px;
@@ -40,38 +40,7 @@
         background-color:#f5f5f5;
         display: table-cell;
   }
- btn {
-   border-top: 1px solid #96d1f8;
-   background: #65a9d7;
-   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
-   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-   background: -o-linear-gradient(top, #3e779d, #65a9d7);
-   padding: 10px 20px;
-   -webkit-border-radius: 38px;
-   -moz-border-radius: 38px;
-   border-radius: 38px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: white;
-   font-size: 24px;
-   font-family: Helvetica, Arial, Sans-Serif;
-   text-decoration: none;
-   vertical-align: middle;
-   }
-btn:hover {
-   border-top-color: #28597a;
-   background: #28597a;
-   color: #ccc;
-   }
-btn:active {
-   border-top-color: #1b435e;
-   background: #1b435e;
-   }
-  </style>
+</style>
 </head>
 
 <body>
@@ -92,17 +61,17 @@ btn:active {
 </header>
         <p><h3>Welcome to the Yale Events page!</h3><p>
         <p><h4>See all {{ num }} events below.</h4><p>
-        <p><a href="/events/new" id="new" class="btn"><h4>Create a new event!</h4></a></p>
+        <a class="btn btn-primary" href="/events/new" role="button" id="new">Create a New Event</a>
 
 </h3></p>
-      <div class="row">
+      <div class="card">
         <ul id="events">
           {% for e in allEvents %}
-          <div class=>
             <li class="event" id="event-{{e.id}}">
-              <div class="card">
-                <a href="/events/{{e.id}}" id="title">
-                  <h5 class="card-title">{{e.title}}</h5>
+              <div class="card-body">
+                 <h5 class="card-title">{{e.title}}</h5>
+                <a href="/events/{{e.id}}" id="title" class="btn btn-primary">Event Details</a>
+                 
                 </a>
                 <h6 class="card-subtitle" id="time"><time>{{e.date}}</time></h6>
                 </h6>
@@ -112,6 +81,8 @@ btn:active {
           {% endfor %}
         </ul>
       </div>
+  </div>
+</div>
 
     <footer class="footer">
       <div class="container">
