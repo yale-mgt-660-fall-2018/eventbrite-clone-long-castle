@@ -58,7 +58,7 @@
             
             <div class="form-group">
                 <label for="title">Title</label>
-                <input autocomplete="off" autofocus class="form-control" name="name" id="title" placeholder="Event Name" type="text">
+                <input autocomplete="off" autofocus class="form-control" name="title" id="title" placeholder="Event Name" type="text">
             </div>
             
             <div class="form-group">
@@ -76,7 +76,7 @@
             
             <div class="form-group">
             <label for="image">Image</label>
-            <input class="form-control" type="text" id="image" name="picture">            
+            <input class="form-control" type="text" id="image" name="image">            
             </div>
             
             <button class="btn btn-primary" type="submit" name="submit">Create</button>
@@ -91,7 +91,7 @@
 
 <script>
 document.querySelector('form').onsubmit = function() {
-    let name = document.querySelector('input[name=name]');
+    let name = document.querySelector('input[name=title]');
     if (!name.value) {
         alert('You must specify your event name');
         name.focus();
@@ -115,7 +115,7 @@ document.querySelector('form').onsubmit = function() {
         return false;
     }
     
-    let picture = document.querySelector('input[name=picture]');
+    let picture = document.querySelector('input[name=image]');
     if (!picture.value) {
         alert('You must upload a picture for your event');
         picture.focus();

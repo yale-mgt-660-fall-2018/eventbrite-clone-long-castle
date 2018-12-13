@@ -12,9 +12,9 @@ async function register(ctx) {
         try {
             const theEvent = await eventsModels.insert(
                 ctx.db,
-                ctx.request.body.name,
+                ctx.request.body.title,
                 ctx.request.body.event_start_time,
-                ctx.request.body.picture,
+                ctx.request.body.image,
                 ctx.request.body.location,
             );
             console.log(theEvent);
