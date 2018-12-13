@@ -57,11 +57,13 @@
         <form action="/events/new" method="post">
             
             <div class="form-group">
-                <input autocomplete="off" autofocus class="form-control" name="event_name" name="title" placeholder="Event Name" type="text">
+                <label for="title">Title</label>
+                <input autocomplete="off" autofocus class="form-control" name="event_name" id="title" placeholder="Event Name" type="text">
             </div>
             
             <div class="form-group">
-                <input class="form-control" name="event_location" placeholder="Event Location" type="text">
+                <label for="location">Location</label>
+                <input class="form-control" name="event_location" id="location" placeholder="Event Location" type="text">
             </div>
             
             <label class="control-label">Event Start Time</label>
@@ -72,9 +74,9 @@
                     </span>
             </div>       
             
-            <label for="picture">Choose a picture for your event:</label>
             <div class="form-group">
-            <input class="form-control" type="text" id="picture" name="picture">            
+            <label for="image">Image</label>
+            <input class="form-control" type="text" id="image" name="picture">            
             </div>
             
             <button class="btn btn-primary" type="submit" name="submit">Create</button>
