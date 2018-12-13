@@ -68,7 +68,7 @@
           {% for e in allEvents %}
             <li class="event" id="event-{{e.id}}">
                 <a href="/events/{{e.id}}" id="title" class="">{{e.title}}</a>
-                <p><id="time"><time>{{e.date}}</time>
+                <id="time"><time>{{e.date}}</time>
               </div>
             </li>
           </div>
@@ -82,9 +82,9 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a class="card-title" href="/events/{{e.id}}" id="title" class="">{{e.title}}</a>
+        <p class="card-text" id="time"><time>{{e.date}}</time></p>
+        <a href="/events/{{e.id}}" class="btn btn-primary">Event Details</a>
       </div>
     </div>
   </div>
@@ -98,7 +98,7 @@
     </div>
   </div>
 </div>
-
+<div>
     <footer class="footer">
       <div class="container">
         <span class="text-muted">
