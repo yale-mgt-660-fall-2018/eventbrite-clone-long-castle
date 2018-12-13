@@ -64,12 +64,24 @@
         <a class="btn btn-primary" href="/events/new" role="button" id="new">Create a New Event</a>
 
 </h3></p>
-      <div class="card">
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{e.title}}</h5>
+        <a href="/events/{{e.id}}" id="title" class="btn btn-primary">Event Details</a>
+        <p class="card-text" id="time"><time>{{e.date}}</time>
+    </div>
+  </div>
+  </div>
+</div>
+
+      <div class="">
         <ul id="events">
           {% for e in allEvents %}
             <li class="event" id="event-{{e.id}}">
-              <div class="card-body">
-                 <h5 class="card-title">{{e.title}}</h5>
+                 <h5 class="">{{e.title}}</h5>
                 <a href="/events/{{e.id}}" id="title" class="btn btn-primary">Event Details</a>
                  
                 </a>
