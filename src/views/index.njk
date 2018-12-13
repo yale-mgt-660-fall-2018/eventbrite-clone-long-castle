@@ -47,7 +47,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="navbar-header">
     <a class="navbar-brand" href="/">
-      <img classs="img-responsive" width="45px" height="" src="http://100kdesign.com/wp-content/uploads/2012/04/YaleSOM.jpg">
+      <img classs="img-responsive" width="45px" height="" id="logo" src="http://100kdesign.com/wp-content/uploads/2012/04/YaleSOM.jpg">
     Yale Events</a>
   </div>
     <div class="navbar-nav">
@@ -74,7 +74,7 @@ Total Events Created: {{ num }}
                 <a href="/events/{{e.id}}" id="title">
                   <h5 class="card-title">{{e.title}}</h5>
                 </a>
-                <h6 class="card-subtitle">
+                <h6 class="card-subtitle">{{e.date}}</h6>
                 </h6>
               </div>
             </li>
