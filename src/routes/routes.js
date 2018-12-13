@@ -13,5 +13,6 @@ router.get('/events/:id', eventControllers.detail);
 router.get('/donate', eventControllers.donation);
 router.get('/support', eventControllers.donation);
 router.post('/events/:event_id/register', attendeeControllers.register);
+router.get('/events/:id/confirm/:confirmation', eventControllers.detail);
 
 module.exports = router;

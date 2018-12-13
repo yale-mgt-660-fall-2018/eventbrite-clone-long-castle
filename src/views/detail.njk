@@ -117,13 +117,20 @@
                             <input name="email" placeholder="Your email" id="email" type="email">
                         </div>
                         
-                        <button class="btn btn-primary" type="submit" name="submit">Create</button>
+                        <button class="btn btn-primary" type="submit" name="submit">Register</button>
                     </form>        
                 </div>
             
             </div>
         {% else %}
             <h1>No event with that id!</h1>
+        {% endif %}
+        
+        {% if (confirmation !=  null) %}
+            <div class="confirmation-code" style="color: red;">
+                Your confirmation code is {{ confirmation }}. Thanks for registering!
+            </div>
+        {% else %}
         {% endif %}
         
         <div>

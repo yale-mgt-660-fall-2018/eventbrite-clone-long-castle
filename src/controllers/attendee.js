@@ -1,3 +1,5 @@
+const crypto = require('crypto');
+
 const eventsModels = require('../models/events.js');
 const attendeesModels = require('../models/attendees.js');
 
@@ -17,7 +19,12 @@ async function register(ctx) {
                 ctx.request.body.email,
             );
             console.log(theAttendee);
-            ctx.redirect('/events/' + event_id);
+            const teamNickname = 'long-castle';
+            const confirmation = crypto.createHash('sha256')
+                .update(`${theAttendee.email}-${teamNickname}`)
+                .digest('hex')
+                .substring(0, 7);
+            ctx.redirect('/events/' + event_id + '/confirm/' + confirmation);
         } catch (e) {
             errors.push("there was an error saving");
         }
