@@ -11,7 +11,7 @@ async function insert(db, event_id, email) {
         VALUES ($1, $2)
         RETURNING id, event_id, email
     `;
-    return db.one(stmt, [event_id, email]);
+    return db.one(stmt, [event_id, email.toLowerCase()]);
 }
 
 /**
