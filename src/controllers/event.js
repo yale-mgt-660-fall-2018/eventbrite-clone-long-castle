@@ -12,10 +12,10 @@ async function register(ctx) {
         try {
             const theEvent = await eventsModels.insert(
                 ctx.db,
-                ctx.request.body.event_name,
+                ctx.request.body.name,
                 ctx.request.body.event_start_time,
                 ctx.request.body.picture,
-                ctx.request.body.event_location,
+                ctx.request.body.location,
             );
             console.log(theEvent);
             ctx.redirect('/events/' + theEvent.id);
