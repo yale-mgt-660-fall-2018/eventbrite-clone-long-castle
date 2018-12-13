@@ -5,16 +5,12 @@
  * @returns {Promise} - Promise that resolves to new row in db.
  */
 async function insert(db, event_id, email) {
-    // Notice that our JavaScript variables are CamelCase
-    // and our SQL variables are snake_case. This is a
-    // common convention.
     console.log("just entered attendee insert function");
     const stmt = `
         INSERT INTO registrations (event_id, email)
         VALUES ($1, $2)
         RETURNING id, event_id, email
     `;
-    //    console.log(db.one(stmt, [event_id, date, imageURL, location]));
     return db.one(stmt, [event_id, email]);
 }
 
@@ -37,7 +33,7 @@ async function count(db) {
  * @returns {Promise} - Promise that resolves to one event or null
  */
 async function getByEventID(db, searchString) {
-    console.log("just entered getByID");
+    console.log("just entered getByEventID");
     const stmt = `
         SELECT * FROM registrations WHERE
         event_id = $1

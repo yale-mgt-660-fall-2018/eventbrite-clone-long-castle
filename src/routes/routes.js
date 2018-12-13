@@ -1,6 +1,7 @@
 const Router = require('koa-router');
 const indexControllers = require('../controllers/index.js');
 const eventControllers = require('../controllers/event.js');
+const attendeeControllers = require('../controllers/attendee.js');
 
 const router = new Router();
 router.get('/', indexControllers.index);
@@ -11,5 +12,6 @@ router.post('/events/new', eventControllers.register);
 router.get('/events/:id', eventControllers.detail);
 router.get('/donate', eventControllers.donation);
 router.get('/support', eventControllers.donation);
+router.post('/events/:event_id/register', attendeeControllers.register);
 
 module.exports = router;

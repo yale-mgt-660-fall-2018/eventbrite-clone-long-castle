@@ -1,4 +1,5 @@
 const eventsModels = require('../models/events.js');
+const attendeesModels = require('../models/attendees.js');
 
 /**
  * @param  {Context} ctx - A Koa Context
@@ -17,7 +18,7 @@ async function register(ctx) {
                 ctx.request.body.event_location,
             );
             console.log(theEvent);
-                ctx.redirect('/events/' + theEvent.id);
+            ctx.redirect('/events/' + theEvent.id);
         } catch (e) {
             errors.push("there was an error saving");
         }
@@ -44,7 +45,11 @@ async function detail(ctx) {
         const theEvent = await eventsModels.getByID(ctx.db, event_id);
         console.log("finished looking for event");
         console.log(theEvent);
-        return ctx.render(template, { theEvent, donation });
+        console.log("now searching for attendees")
+        const attendees = await attendeesModels.getByEventID(ctx.db, event_id);
+        console.log("finished looking for attendees");
+        console.log(attendees);
+        return ctx.render(template, { theEvent, donation, attendees });
     } catch (e) {
         console.log(e);
         errors.push("there was an error finding the event");
