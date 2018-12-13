@@ -58,10 +58,11 @@
   </div>
 </nav>
 </header>
-        <p><h2>See all events below!</h2><p>
-{# Changed the href below to register #}
+        <p><h3>Welcome to the Yale Events page!</h3><p>
+        <p><h2>See all {{ num }} events below.</h2><p>
         <p><h3><a href="/events/new" id="new" class="btn">Create a new event!</a></h3></p>
-        <p><h3>Total Events: {{ num }}</h3></p>
+
+</h3></p>
       <div class="row">
         <ul id="events">
           {% for e in allEvents %}
