@@ -159,6 +159,9 @@
         <div>
         Want to contribute? <a href="/{{ donation.toLowerCase() }}" id="donate">{{ donation }}</a> now!
         </div>
+        
+        <ul style="display:none;" class="form-errors"></ul>
+
     
     <footer class="footer">
       <div class="container">
@@ -179,17 +182,26 @@
 <script>
 document.querySelector('form').onsubmit = function() {
     let email = document.querySelector('input[name=email]');
+    let error_box = document.querySelector('ul[class="form-errors"]');
+
     if (!email.value) {
-        alert('You must specify your email');
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode('You must specify your email'));
+        error_box.appendChild(li);
+        error_box.style = "display: inline;";
         email.focus();
         return false;
     }
     else if (!email.value.toLowerCase().endsWith("yale.edu")) {
-        alert('You must specify your Yale email address');
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode('You must specify your Yale email address'));
+        error_box.appendChild(li);
+        error_box.style = "display: inline;";
         email.focus();
         return false;
     }
     
+    error_box.style = "display: none;";
     return true;
 };
 </script>
