@@ -33,7 +33,6 @@
   <title>MGT660 Eventbrite Clone</title>
   <style>
       footer {
-        position: absolute;
         bottom: 0;
         width: 100%;
         height: 60px;
@@ -44,7 +43,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="header">
     <div class="navbar-header">
     <a class="navbar-brand" href="/">
       <img classs="img-responsive" width="45px" height="" id="logo" src="http://100kdesign.com/wp-content/uploads/2012/04/YaleSOM.jpg">
@@ -74,7 +73,7 @@ Total Events Created: {{ num }}
                 <a href="/events/{{e.id}}" id="title">
                   <h5 class="card-title">{{e.title}}</h5>
                 </a>
-                <h6 class="card-subtitle">{{e.date}}</h6>
+                <h6 class="card-subtitle" id="time"><time>{{e.date}}</time></h6>
                 </h6>
               </div>
             </li>
