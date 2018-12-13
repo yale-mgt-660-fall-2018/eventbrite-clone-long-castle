@@ -40,5 +40,5 @@ async function finalreport(ctx) {
 module.exports = {
     index,
     about,
-    finalreport,
+    finalreport
 };
