@@ -12,6 +12,7 @@ async function events(ctx) {
     const template = "";
     try {
         events = await eventsModels.getAll(ctx.db);
+        console.log("got events!")
         ctx.status = 200;
         ctx.body = events;
     } catch (e) {
