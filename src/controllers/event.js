@@ -10,10 +10,20 @@ async function register(ctx) {
     if (ctx.method === 'POST') {
         console.log("trying to POST a new event");
         try {
+            console.log(ctx.request.body);
+            const eventDate = new Date(
+                ctx.request.body.year,
+                ctx.request.body.month,
+                ctx.request.body.day,
+                ctx.request.body.hour,
+                ctx.request.body.minute
+            );
+            console.log("Assembled date: " + eventDate);
+            console.log("Datepicker date: " + ctx.request.body.event_start_time);
             const theEvent = await eventsModels.insert(
                 ctx.db,
                 ctx.request.body.title,
-                ctx.request.body.event_start_time,
+                eventDate,
                 ctx.request.body.image,
                 ctx.request.body.location,
             );
